@@ -1,0 +1,35 @@
+
+
+
+
+<div class="panel-body">  
+<table >  
+    <thead class="thead-light">  
+        <tr>  
+            <th>UserNo</th>  
+            <th>UserName</th>  
+            <th>UserEmail</th>
+            <th>UserCity</th>  
+            <th>UserState</th>  
+            <th>Action</th>
+              
+        </tr>  
+    </thead>  
+    <tbody>  
+         <tr *ngFor="let user of users "[class.selected]="user === selectedUser" (click)="onSelect(user)">
+            
+            <td>{{user.id }}</td>  
+            <td>{{user.name}}</td>  
+            <td>{{user.email}}</td>  
+            <td>{{user.city}}</td>  
+            <td>{{user.state}}</td>  
+            <td><button (click)="deleteStudent(user)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>   
+              <td><button (click)="UpdateStudent(user)" class='btn btn-info'><i class="fa fa-futboll-0">update</i></button>   
+                
+            </td>  
+          </tr>   
+    </tbody><br>  
+</table>  
+
+<a routerLink='/userForms'>UserForms</a>
+<app-employee [user]="selectedUser"></app-employee>

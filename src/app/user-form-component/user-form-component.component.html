@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <form #employeeform="ngForm"   (ngSubmit) ="onsubmit()" novalidate>
+        
+        <div class="form-group">
+            <label>EmployeeName</label>
+            <input type="text" required #name=ngModel  [class.is-invalid]="name.invalid && name.touched" class="form-control" name="empName" [(ngModel)]="userModel.name">
+            <small  class="text-danger" [class.d-none]="name.valid|| name.untouched">name is requried</small>
+
+        </div>
+
+        <div class="form-group">
+            <label>EmployeeMail</label>
+            
+            <input type="mail" required #email=ngModel  [class.is-invalid]="email.invalid && email.touched" class="form-control" name="empMail" [(ngModel)]="userModel.email">
+            <small  class="text-danger" [class.d-none]="email.valid|| email.untouched">email is requried</small>
+        </div>
+
+        <div class="form-group">
+            <label>EmployeeNo</label>
+            <input type="no" required #phoneno=ngModel [class.is-invalid]="phoneno.invalid && phoneno.touched" class="form-control"  pattern ="^\d{10}$" name="EmployeeNo" [(ngModel)]="userModel.phone">
+            <small  class="text-danger" [class.d-none]="phoneno.valid|| phoneno.untouched">phone number is requried</small>
+
+        </div>
+
+        <div class="form-group">
+                <label>Topics</label>
+            <select  blur="validateTopic(topic.value)" (change)="validateTopic(topic.value)"  #topic=ngModel 
+            [class.is-invalid]="topicHasError && topic.touched"  class="custom-select" name="topic" [(ngModel)]="userModel.topic">
+                <option value="default">Iam Intersted Im</option>
+                <option *ngFor="let topic of topics">{{topic}}</option>
+            </select>
+            <small  class="text-danger" [class.d-none]="!topicHasError|| topic.untouched">please choose the topic</small>
+
+        </div>
+
+
+        <div class="mb-3">
+            <div class="form-check">
+            <label>Time prefernces:</label><br>
+            <input class="form-check-input"  [(ngModel)]="userModel.timepreferncesme" type="radio" name="timePreference" value="Morining">
+            <label class="form-check-label">Morining(5-8)am</label>
+        </div>
+
+        <div class="form-check ">
+            <input class="form-check-input"  [(ngModel)]="userModel.timepreferncesme" type="radio"  name="timePreference" value="evening">
+            <label class="form-check-label">Evevining(6 to 7)pm</label>
+        </div>
+    </div>
+        <div class="form-check mb-3">
+                <label>Offers</label><br>
+            <input class="form-check-input" name="offers" [(ngModel)]="userModel.subscribe" type="checkbox">
+            <label class="form-check-label">
+                send me promotional offers
+            </label>
+        </div>
+
+
+
+        <button [disabled]="employeeform.form.invalid||topicHasError" type="submit" class="btn btn-primary">Sign in</button>
+
+    </form>
+
+</div>
+<li *ngFor="let employee of employees ">  
+
+        <h2>{{employee.name }}</h2>  
+        <h2>{{employee.email}}</h2>  
+        <h2>{{employee.phone}}</h2>  
+        <h2>{{employee.topic}}</h2>  
+        <h2>{{employee.timepreferncesme}}</h2>  
+        <h2>{{employee.subscribe}}</h2>  
+
+</li>

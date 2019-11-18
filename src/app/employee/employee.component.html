@@ -1,0 +1,15 @@
+<div *ngIf="user">
+    <h2>{{user.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{user.id}}</div>
+    <div>
+      
+        <label>State:
+        <input [(ngModel)]="user.state" placeholder="state"/>
+      </label>
+        
+      
+    </div>
+    <button (click)="save(user)">save</button>
+   
+<app-messages></app-messages>
+  </div>

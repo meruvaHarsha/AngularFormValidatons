@@ -1,0 +1,8 @@
+[
+   
+    { "name":"Suresh1","email":"Suresh1@gmail.com","city":"hyd","topic":"Science","timepreferncesme":"afternoon","subscribe":"true" },
+    { "name":"Suresh2","email":"Suresh2@gmail.com","city":"hyd","topic":"Science","timepreferncesme":"afternoon","subscribe":"true" },
+    { "name":"Suresh3","email":"Suresh3@gmail.com","city":"hyd","topic":"Science","timepreferncesme":"afternoon","subscribe":"true" },
+    { "name":"Suresh4","email":"Suresh4@gmail.com","city":"hyd","topic":"Science","timepreferncesme":"afternoon","subscribe":"true" }
+
+]

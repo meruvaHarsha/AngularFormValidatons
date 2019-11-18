@@ -1,0 +1,10 @@
+[
+    { "id":1,"name":"harsha","email":"meruva1@gmail.com","city":"vizag","state":"Andharpradesh" },
+    
+    { "id":2,"name":"Suresh","email":"Suresh@gmail.com","city":"hyd","state":"Telangana" },
+    { "id":3,"name":"Sandeep","email":"Sandeep@gmail.com","city":"Bnaglore","state":"Karnataka" },
+    { "id":4,"name":"Ganesh","email":"Ganesh@gmail.com","city":"Chennai","state":"TamilNadu" },
+    { "id":5,"name":"venkatesh","email":"venkatesh@gmail.com","city":"Noida","state":"Uttarparadesh" },
+    { "id":6,"name":"koti","email":"koti@gmail.com","city":"Delhi","state":"Delhi" }
+
+]
